@@ -1,0 +1,26 @@
+--inicio
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+--janela principais
+local Window = Fluent:CreateWindow({
+    Title = "Fluent " .. Fluent.Version,
+    TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "red"
+})
+
+--abas principais
+local Tabs = {
+    Main = Window:AddTab({ Title = "script" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+--paragrafo
+Tabs.Main:AddParagraph({ Title = "script-XL", Content = "speed-XL" })
+
+--botoes
+Tabs.Main:AddButton({ Title = "infinity jump", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+ end })
+
+
+--ativação
+Window:SelectTab(1)
+Fluent:Notify({ infinity jump = "Fluent", Content = "The script has been loaded." })
